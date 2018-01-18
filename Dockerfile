@@ -5,7 +5,7 @@ MAINTAINER Suilong Liang <suilong.liang@worktogether.io>
 
 ENV LC_ALL C.UTF-8
 
-ENV MARIADB_MAJOR 10.1
+ENV MARIADB_MAJOR 10.2
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r mysql && useradd -r -g mysql mysql
 
