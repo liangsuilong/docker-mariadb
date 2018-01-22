@@ -6,6 +6,9 @@ MAINTAINER Suilong Liang <suilong.liang@worktogether.io>
 ENV LC_ALL C.UTF-8
 
 ENV MARIADB_MAJOR 10.1
+ENV MARIADB_VERSION 10.1.31
+ENV MARIADB_MINOR maria-1~xenial
+
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r mysql && useradd -r -g mysql mysql
 
@@ -59,8 +62,8 @@ RUN { \
 	} | debconf-set-selections \
 	&& apt-get update \
 	&& apt-get install -y \
-		mariadb-server-$MARIADB_MAJOR \
-		mariadb-client-$MARIADB_MAJOR \
+		mariadb-server-${MARIADB_MAJOR}=${MARIADB_}+${MARIADB_VERSION_MINOR} \
+		mariadb-client-${MARIADB_MAJOR}=${MARIADB_VERSION}+${MARIADB_VERSION_MINOR} \
 		mariadb-common \
 		mysql-common \
 		tzdata \
