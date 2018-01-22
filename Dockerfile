@@ -62,7 +62,7 @@ RUN { \
 	} | debconf-set-selections \
 	&& apt-get update \
 	&& apt-get install -y \
-		mariadb-server-${MARIADB_MAJOR}=${MARIADB_}+${MARIADB_VERSION_MINOR} \
+		mariadb-server-${MARIADB_MAJOR}=${MARIADB_VERSION}+${MARIADB_VERSION_MINOR} \
 		mariadb-client-${MARIADB_MAJOR}=${MARIADB_VERSION}+${MARIADB_VERSION_MINOR} \
 		mariadb-common \
 		mysql-common \
