@@ -6,7 +6,7 @@ MAINTAINER Suilong Liang <suilong.liang@worktogether.io>
 ENV LC_ALL C.UTF-8
 
 ENV MARIADB_MAJOR 10.1
-ENV MARIADB_VERSION 10.1.31
+ENV MARIADB_VERSION 10.1.30
 ENV MARIADB_VERSION_MINOR maria-1~xenial
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
